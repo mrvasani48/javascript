@@ -1,0 +1,20 @@
+var a=12;
+var b="kishn vasani";
+var c=null;
+var d;
+d=true;
+var e=(a1)=>{
+	document.write ("<br>");
+	document.write( typeof(a1));
+};
+e("asasa");
+document.write ("<br>");
+document.write(typeof(a));
+document.write ("<br>");
+document.write(typeof(b));
+document.write ("<br>");
+document.write(typeof(c));
+document.write ("<br>");
+document.write(typeof(d));
+document.write ("<br>");
+document.write(typeof(e));
