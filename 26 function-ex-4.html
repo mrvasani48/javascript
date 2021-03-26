@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+	<title>fuction ex 4 object</title>
+	<meta charset="utf-8">
+<!--	<meta name="viewport" content="width=-width , intial-scale=1.0 ">-->
+	<meta name="author" content="javascript function">
+</head>
+<h1>function with object and callee function </h1>
+<script type="text/javascript">
+          function fun(){
+           document.write(arguments[0]+" ");
+            document.write(arguments[1]+" ");
+             document.write(arguments[2]+" ");
+              document.write(arguments[3]+" ");
+      }
+      fun(0,12,"str",true);
+      fun(0,12,"str");
+      fun(0	,12);
+      fun(0);
+      document.write("<br><br> ");
+       function newq(){
+           document.write(arguments);
+           console.log(arguments);
+           document.write(arguments.callee);
+           console.log(arguments.callee);
+
+      }
+      newq(0,12,"str",true);
+
+      document.write("<br><br> ");
+           
+       function nee(){
+       	 document.write("object length = ") ;
+       	   document.write(arguments.length) ;
+       	   document.write("<br>");
+           for(i=0;i<arguments.length;i++)
+           {
+           	document.write(arguments[i]+" <br>");
+           	console.log(arguments[i]);
+           }
+      }nee(0,12,"str",true);
+      
+</script>
+<h1>we using array in function on parameter</h1>
+<script type="text/javascript">
+	function lambda(a,b,ara=["java","ja","java","ja","java","ja","java","ja"])
+	{ 
+	  console.log(a);
+	  console.log(b);
+	i=0;
+	   do{	
+               console.log(ara[i]);
+               i++;
+          }while(i< ara.length );
+   }
+   lambda(11200,12111,[1,2,3,4,5,6,7,8]);
+</script>
+<body>
+</body>
+</html>

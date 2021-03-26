@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>anonymous function with passing arguments</title>
+</head>
+<body>
+<script type="text/javascript">
+	//ex1
+	function sa(a1)
+	{
+		return a1(12,13);
+		
+	}	
+	sa(function(a,b){
+		document.write(a+b);
+		//document.write(arguments.callee);
+	});
+	
+
+	//ex 2
+	function aa(a)
+	{
+		return function(b){
+			return(a+b);
+		};
+		
+	}	
+    var e =aa(12);
+    document.write(e(12));
+    function heee(a)
+    {
+    	return(function(b){
+    		return a+b;
+    	});
+    }
+   var cd = heee(1212);
+ console.log(  cd(12));
+</script>
+</body>
+</html>

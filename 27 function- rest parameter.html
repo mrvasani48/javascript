@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rest parameter</title>
+</head>
+<body>
+        <script type="text/javascript">
+        	console.log("length=");
+        	function myf( ...args)
+        	{
+        	//	document.write(a+"<br>");
+        		for(i=0;i<args.length;i++)
+        		{
+                document.write(args[i] +"<br>");
+                console.log(args[i]);
+                
+                }
+        	}
+        	myf(1,2,3,4,5,6,7,8,9,15,45);
+        </script> 
+         <script type="text/javascript">
+        	
+        	function myf1(a, ...args)
+        	{
+        	   //rest parameter
+                 console.log("rest parameter");
+                 console.log(a);
+        	     console.log(args);
+
+        	}
+        	myf1(1,2,3,4,5,6,7,8,9,15,45);
+
+        	function myf2(a)
+        	{
+        	     console.log(arguments);
+        	     console.log(a);
+
+        	}
+        	myf2(1,2,3,4,5,6,7,8,9,15,45);
+        </script> 
+</body>
+</html>

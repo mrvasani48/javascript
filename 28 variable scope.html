@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>variable scope</title>
+</head>
+<body>
+<script type="text/javascript">
+	var a="this is local variable";
+
+	    function myfun(){
+		  var a=2;
+		  document.write(a+"<br>");
+
+		  function fun()
+		  {
+		  var a=23;
+		  document.write(a+"<br>");
+	      };
+       	fun();
+       	document.write(a +"<br>");
+	};
+	myfun();
+		document.write(a+"<br>");
+
+		if(true)
+		{
+			var a="block scope";
+				document.write(a+"<br>");	
+		}
+		document.write(a+"<br>");
+</script>
+</body>
+</html>

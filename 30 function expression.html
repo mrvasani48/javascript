@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>function  ecpression </title>
+</head>
+<body>
+<script type="text/javascript">
+	var a= function fun()
+           {
+           	document.write("function expression");
+           }
+           a();
+              	document.write("<br>");
+              	// using only parameter only
+    let b= function fun(a=10,b=20,c=30) 
+           {
+           		document.write("a="+a+"<br>");
+           		document.write("b="+b+"<br>");
+           		document.write("c="+c+"<br>");
+           		document.write(" sum a+b+c = ");
+           	document.write( a+b+c );
+          // 	document.write(typeof a +"<br>");
+           }
+           b(10);     
+
+// using rest parameter
+             let c= function fun(...args) 
+           {
+           		console.log("a="+args[0]);
+           		console.log("b="+args[1]);
+           		console.log("c="+args[2]);
+           		console.log(" sum a+b+c= ");
+           		console.log( args[0]+args[1]+args[2] );
+          // 	document.write(typeof a +"<br>");
+           }
+           c(10,20,30);   
+///using arguments
+             let d= function fun(...args) 
+           {
+           		console.log("a="+arguments[0]);
+           		console.log("b="+arguments[1]);
+           		console.log("c="+arguments[2]);
+           		console.log(" sum a+b+c= ");
+           		console.log( arguments[0]+arguments[1]+arguments[2]);
+          // 	document.write(typeof a +"<br>");
+           }
+           c(10,20,30);        
+</script>
+</body>
+</html>
