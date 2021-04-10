@@ -1,0 +1,13 @@
+document.write(" true = "+Boolean(true) +" <br> ");
+document.write(" false = "+Boolean(false) +" <br> ");
+document.write(" 1 = "+Boolean(1) +" <br> ");
+document.write(" 0 = "+Boolean(0) +" <br> ");
+document.write(" 12 = "+Boolean(12) +" <br> ");
+//document.write(" nan = "+Boolean(nan) +" <br> ");
+document.write(" hello = "+Boolean("hello") +" <br> ");
+//document.write(" empty = "+Boolean(empty) +" <br> ");
+document.write(" -10 = "+Boolean(10) +" <br> ");
+document.write(" 10 = "+Boolean(10) +" <br> ");
+document.write("no para  = "+Boolean() +" <br> ");
+document.write(" null = "+Boolean(null) +" <br> ");
+document.write(" number = "+Boolean(Number) +" <br> ");
