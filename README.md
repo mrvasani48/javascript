@@ -1,5 +1,5 @@
 # javascript 
-#example of javacript
+#example of core javacript
 javascript using inline 
 and also using eternal javascript
 
