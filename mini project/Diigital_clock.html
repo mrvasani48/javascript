@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <style>
+        p {
+            color: white;
+            background-color: rgb(0, 23, 92);
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            padding: 50px;
+            text-shadow: 1px 2p 1px gainsboro;
+            font-size: 130px;
+            height: 50%;
+        }
+        button{
+            height: 45%;
+            color: white;
+            background-color: rgb(0, 23, 92);
+            border-radius: 10px;
+            text-align: center;
+            margin: 10px;
+            padding: 50px;
+            text-shadow: 1px 2p 1px gainsboro;
+            font-size: 100px;
+            width: 98.4%;
+            margin-right: 10px;
+        }
+        button:hover{
+            background-color: ghostwhite;
+            color: rgb(0, 23, 92);
+        }
+    </style>
+</head>
+
+<body>
+    <p id="time" class="time">time</p>
+    <button type="button" id="button" class="button" onclick="todate()">check-date</button>
+    <script>
+
+        setInterval(today, 1000);
+        function today() {
+            var date = new Date();
+
+            function formattime(date) {
+                var ampm="am"
+                hour = date.getHours();
+                if (hour < 10) {
+                    hour = "0" + hour;
+                }
+                else {
+                    hour = hour
+                };
+
+                min = date.getMinutes();
+                if (min < 10) {
+                    min = "0" + min
+                }
+                else {
+                    min = min;
+                };
+
+                sec = date.getSeconds();
+
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+                else {
+                    sec = sec;
+                };
+                if (hour > 12) {
+                    hour = hour - 12;
+                    ampm="pm";
+                }
+                else {
+                    hour = hour;
+                    ampm="am";
+                };
+                return "Time = " + hour + ":" + min + ":" + sec + "  "+ampm;
+
+            };
+            document.getElementById("time").innerHTML = formattime(date);
+        };
+        today();
+
+        setInterval(todate,3600000 );
+        function todate() {
+            var date = new Date();
+            function dateformate() {
+                var date = new Date();
+                dat = date.getDate();
+                mth = date.getMonth();
+                day = date.getDay();
+                year = date.getFullYear();
+                function mnth(mth) {
+                    var array = ["january", "february", "march", "April", "may", "june", "july", "august", "september", "octomber", "november", "december"];
+                    return array[mth];
+
+                };
+                function da(day) {
+                    arr = ["sunday", "monday", "Tuesday", "wednesday", "thursday", "friday", "satureday"];
+                    return arr[day]
+                };
+                return "Date = "+ da(day) + " " + dat + "-" + mnth(mth) + "-" + year ;
+
+            };
+            document.getElementById("button").innerHTML = dateformate(date);
+
+        };
+
+
+
+        today();
+    </script>
+
+</body>
+
+</html>
