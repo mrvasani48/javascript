@@ -2,7 +2,7 @@
 var mobile=function (model,ram,clr,btr){
     this.model=model;
     this.ram=ram;
-   var color=clr; // privite not acess to other code this scope is local 
+   var color=clr; // privite not acess to other code this variable scope is local 
     this.battery=btr;   
     this.all=()=>{
         return(this.model+this.ram+this.color+this.battery);
